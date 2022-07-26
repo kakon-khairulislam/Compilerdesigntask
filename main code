@@ -1,0 +1,54 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   string exp[5];
+
+  cout << "Enter expressions: " << endl;
+
+  for (int i = 0; i < 5; ++i) {
+    cin >> exp[i];
+  }
+
+  cout << "The expressions are: ";
+
+  for (int n = 0; n < 5; ++n) {
+    cout << exp[n]  ;
+  }
+
+  int z;
+  char a = '&';
+  if(exp[5].find(a) != string::npos){
+      int x;
+      istringstream(exp[0]) >> x;
+      int y;
+      istringstream(exp[2]) >> y;
+      z = x*y;
+      cout << " result : " << z << endl;
+
+  }
+ char b = '#';
+  if(exp[5].find(b) != string::npos){
+      int x;
+      istringstream(exp[2]) >> x;
+      int y;
+      istringstream(exp[4]) >> y;
+      z = x*y;
+      cout << " result : " << z << endl;
+
+  }
+
+
+
+
+
+
+
+
+  return 0;
+}
+
